@@ -17,4 +17,5 @@ Code to install:
     ~/Utilities/init.sh
 
 Or one-liner:
+
     cd ~/; wget https://github.com/starobinskii/SCC-Utility/archive/master.zip; unzip ~/master.zip; mv ~/SCC-Utility-master ~/Utilities; rm -f ~/master.zip; chmod +x ~/Utilities/*.sh; ~/Utilities/init.sh
