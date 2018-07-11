@@ -16,11 +16,11 @@ echo -n "E-mail: "
 read mail
 echo "Telegram users can also receive notifications."
 sleep 1.5s
-echo "To do so enter code from @ailurus_bot."
+echo "To do so enter code from @ailurus_bot (More -> Get code)."
 sleep 1s
 echo -n "Telegram Code: "
 read telegram
-while ! [[ "${telegram}" =~ "^[0-9]+$" || "" == ${telegram} ]] ; do
+while ! [[ "${telegram}" =~ '^[0-9]+$' || "" == ${telegram} ]] ; do
     echo "Code should only contain numbers!"
     echo -n "Telegram Code: "
     read telegram
