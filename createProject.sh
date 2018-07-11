@@ -220,8 +220,9 @@ sed -e "s/%compiler%/${compiler}/g" ${configurationSource} | sed -e "s/%type%/${
 rm -f ${configurationSource}
 
 #creating slurm script
-slurm="${projectDir}/job.slurm"
-slurmSource="${projectDir}/job.slurm.sed"
+mkdir -p "${projectDir}/Executions"
+slurm="${projectDir}/Executions/job.slurm"
+slurmSource="${projectDir}/Executions/job.slurm.sed"
 
 cp ~/Utilities/Examples/Slurms/${parallelization}.slurm ${slurmSource}
 
