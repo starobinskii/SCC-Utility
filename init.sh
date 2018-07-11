@@ -20,7 +20,7 @@ echo "To do so enter code from @ailurus_bot (More -> Get code)."
 sleep 1s
 echo -n "Telegram Code: "
 read telegram
-while ! [[ "${telegram}" =~ '^[0-9]+$' || "" == ${telegram} ]] ; do
+while ! [[ "${telegram}" =~ ^[0-9]+$ || "" == ${telegram} ]] ; do
     echo "Code should only contain numbers!"
     echo -n "Telegram Code: "
     read telegram
