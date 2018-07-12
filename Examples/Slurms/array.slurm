@@ -30,6 +30,10 @@ fi
 
 folders=$(find ./Runs/ -maxdepth 1 -type d | tail -n +$((2 + ${firstTask})))
 
+mkdir -p ./Runs
+
+date "+Started at:%t%Y-%m-%d %H:%M:%S" > ./Runs/time.log
+
 for folder in ${folders}; do
   pushd ${folder}
   
@@ -41,3 +45,5 @@ for folder in ${folders}; do
 done
 
 wait $pids
+
+date "+Finished at:%t%Y-%m-%d %H:%M:%S" >> ./Runs/time.log
