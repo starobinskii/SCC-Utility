@@ -55,7 +55,7 @@ alias mv='mv -i'
 alias rm='rm -i'
 alias la='ls'
 alias qq='squeue -i 1'
-alias ww='top -u starobinskiieb'
+alias ww='top -u $(whoami)'
 alias bc='bc -liq'
 alias space='du -chs .'
 alias python3='/lustre/opt/software/python/3.5.2/bin/python3'
@@ -79,13 +79,13 @@ clean(){
 }
 
 notify(){
-    source /home/ipmmtm/starobinskiieb/user.cfg
+    source /home/ipmmtm/$(whoami)/user.cfg
     
     curl --data \"message=\${1}&telegram=\${telegram}&mail=\${mail}\" https://ailurus.ru/stands/scc/server/daemon.php
 }
 
 publish(){
-    source /home/ipmmtm/starobinskiieb/user.cfg
+    source /home/ipmmtm/$(whoami)/user.cfg
     
     result=\$(curl -F data=@\${1} https://ailurus.ru/stands/scc/server/savior.php)
     firstTerm=\$(echo \"\${result}\" | awk -F'\"' '{print \$2}')
