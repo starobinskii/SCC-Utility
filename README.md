@@ -12,6 +12,7 @@ This will get you a full copy of utilities set developed to run on a supercomput
 Code to install:
 
     cd ~/
+    
     wget https://github.com/starobinskii/SCC-Utility/archive/master.zip
     
     unzip ~/master.zip
@@ -22,7 +23,7 @@ Code to install:
     
     bash ~/Utilities/init.sh
 
-Or one-liner:
+Or a one-liner:
 
     cd ~/; wget https://github.com/starobinskii/SCC-Utility/archive/master.zip; unzip ~/master.zip; mv ~/SCC-Utility-master ~/Utilities; rm -f ~/master.zip; bash ~/Utilities/init.sh
 
